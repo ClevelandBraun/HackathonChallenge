@@ -22,3 +22,44 @@ document.addEventListener('DOMContentLoaded', function() {
       alert('Cannot display link!');
     });
 });
+
+$(document).ready(function(){
+  
+  $(document).keypress(function(e) {
+    if(e.which == 13) {
+      if($("#text").val().length > 0 || $("#track").text().length == 7) { 
+        var project = $("#text").val();
+        $("#text").val("");
+        $("#project").html("<strong>" + project + "<strong>");
+        $("#input-row").toggleClass("hidden");
+        if($("#track").text().length == 7){
+          $("#track").html("Track");
+          }
+        else if($("#track").text().length == 5){
+          $("#track").html("Untrack");  
+        };
+      }
+      else{
+        $("#project").html("<strong> Invalid Project <strong>");
+      }
+    }
+  });
+
+  $("#track").click(function(){
+    if($("#text").val().length > 0 || $("#track").text().length == 7) { 
+      var project = $("#text").val();
+      $("#text").val("");
+      $("#project").html("<strong>" + project + "<strong>");
+      $("#input-row").toggleClass("hidden");
+      if($("#track").text().length == 7){
+        $("#track").html("Track");
+      }
+      else if($("#track").text().length == 5){
+        $("#track").html("Untrack");  
+      };
+    }
+    else{
+      $("#project").html("<strong> Invalid Project <strong>");
+    }
+  });
+});
