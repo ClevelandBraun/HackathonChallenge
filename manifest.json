@@ -12,7 +12,7 @@
 	},
 
 	"content_scripts": [{
-     "js": ["jquery.min.js","jquery-2.2.0.min.js","bootstrap.min.js"],
+     "js": ["jquery.min.js","jquery-3.1.1.js","bootstrap.min.js"],
      "matches": ["http://*/*"]
    }],
 
